@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DS_Sinhvien>
+    <SinhVien>
+        <MaSV>1</MaSV>
+        <TenSV>Nguyen Van An</TenSV>
+        <NamSinh>2000</NamSinh>
+        <GioiTinh>Nam</GioiTinh>
+        <MaLop>T1904A</MaLop>
+    </SinhVien>
+    <SinhVien>
+        <MaSV>2</MaSV>
+        <TenSV>Nguyen Van Bn</TenSV>
+        <NamSinh>2001</NamSinh>
+        <GioiTinh>Nu</GioiTinh>
+        <MaLop>T1904A</MaLop>
+    </SinhVien>
+    <SinhVien>
+        <MaSV>3</MaSV>
+        <TenSV>Nguyen Van Cn</TenSV>
+        <NamSinh>2002</NamSinh>
+        <GioiTinh>3D</GioiTinh>
+        <MaLop>T1904A</MaLop>
+    </SinhVien>
+</DS_Sinhvien>

@@ -1,0 +1,90 @@
+﻿HTML - Hypertext Markup Language
+1 - Brower - Xem ảnh browser.jpg
+~ Giao thức HTTP(Hypertext Transfer Protocol): là ngôn ngữ giao tiếp giữa Client(Chrome,IE,...) với Sever.
+~ Web server (Apache, nginx, microsoft iis, nodejs).
+2 - Web server
+~ Host là IP máy tính
+~ Post là cổng để 1 host có thể truy cập nhiều server.
+~ Static-server node
+~ npm -g install static-server ()  // khác với --save -> lưu vào file package.json
+~ chạy static-server -> localhost -> vào localhost đó trên web.
+~ đổi host -> static-server -p số cổng ( vd: static-server -p 8000 )
+~ 2 cách: k dùng node: + python -m SimpleHTTPServer port
+		      + php -S localhost"port	
+3 - Network - LAN(Local area network - Có IP), internet, tunnel(Đường hầm - Để k phải mở post).
+- ifconfig -> check id private
+~ Sử dụng ngrok để truy cập vào địa chỉ máy.
+
+4 - Index.html  - Là file chính được mở đầu tiên.
+~ Sử dụng file khác thì thêm đường dẫn.
+
+5 - Run JS on Browser 
+-> link file js vào file html -> static-server -> xem trong console sẽ có chạy js.
+
+6 - Document Object 
+~Console -> gõ document -> document.head (document....) -> Chuột phải reveal (Nhảy vào phần head bên elements)
+~document.getElementById().  
+-> document.getElementById('tên id').
+7 - HTMLElement 
+~ $0 sẽ hiện ra phần mà mình đã chỉ chuột bên Elements
+~ $0.children -> thằng phần tử con (Xem ảnh).
+~ $0.textContent -> show ra phần text hoặc có thể thay đổi phần text đó(Xem ảnh)..
+~ document.createElement() -> tạo ra HTMLElements mới.
+~ appendChild() -> Đưa HTMLElements đã tạo vào trình duyệt.
+~ remove() -> chỉ vào phần muốn xóa bên Elements ! quay lại console gõ $0.remove()
+
+8 - innerHTML - Chèn thêm dc cả tag HTML
+~ $0.innerHTML
+
+9 - onclick() -- Chỉ đăng ký dc 1 listener cho 1 sự kiện
+~ onclick() là sự kiện để HTML thao tác với js 
+
+10 - $0.addEvenListener (Observer design pattern) -- Ngược lại onclick-> thực hiện dc nhiều công việc
+
+11 - localStorage -- Lưu trữ dữ liệu nhập vào trên trình duyệt dài hạn
+~ dữ liệu k dc chia sẻ khác trình duyệt hoặc máy khác
+~ giới hạn dữ liệu
+
+12 - sessionStorage -- Lưu trữ dữ liệu ngắn hạn trong 1 phiên (close tab)
+
+13 - AJAX - 
+
+14 - DEBUG
+
+15 - Firebase Hosting 
+ 
+16 - Firebase Cloud Firestore
+
+17 - XSS(Cross-site scripting)
+
+18:  Table
+Đường dẫn tương đối ./file
+Đường dẫn tuyệt đối src url
+
+Scope="row"/ "col" hàng hay cột
+ 
+Colspan ="2" trải dài 2 cột
+
+Rowspan ="' trải dài hàng
+Thead,tbody,tfoot
+
+19: Form	
+label: for=" Tên"
+input: text, password, number(step, min, max) , range(min max), radio,submit
+dropdown list: Select
+datalist: Datalist
+text-area
+
+validation form: required/ number, range use min max/ minlength, maxlength
+
+20. Sematic: Giúp SEO, accessibility, dễ hiểu
+header,nav,main,footer,article(bài viết, blog,tạp chí, văn bản, âm thanh...), section(định nghĩa thành phần trong tài liệu như chương,...nội dung đi theo tiêu đề)
+
+Thông thường phần article sẽ thể hiện section và nằm trong section,
+ bên cạnh article là aside thể hiện(tài liệu tham khảo, chú thích, bình luận,)
+
+figure thể hiện hình ảnh, sơ đồ, code! bên trong figure là figcaption để mổ tả phần nội dung của figure
+
+21. Audio, Video(embed)
+src, controls, autoplay,loop
+22.

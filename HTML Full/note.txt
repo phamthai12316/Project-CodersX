@@ -1,0 +1,65 @@
+HTML: Hyper Text Markup Language - Ngôn ngữ đánh dấu văn bản
+
+2 - Web server
+static-server
+static-server -p host
+
+3 - Network
+ngrok: đường ống thông cổng
+
+4 - Index.html
+trong web: file index sẽ dc tìm và khởi chạy đầu tiên (là trang chủ), nếu muốn vào file khác phải có đường dẫn cho nó
+
+5 - Tự học HTML - w3school
+
+6 - HTML structure & terms
+
+  + (html -> tab) hoặc (! -> tab) hoặc gõ tay
+  
+  + Khung: <!DOCTYPE HTML> - Khai báo tài liệu html
+           <html>(Opening tag) -  khai báo bộ HTML
+              <head>(Opening tag) + Element con của Element HTML 
+                      - khai báo các phần giới thiệu, mô tả web: <title>, <meta> (Self closing tag), <link>,
+              </head>(Closing tag)
+              <body>(Opening tag) + Element con của Element HTML
+                      - Nội dung văn bản: <h1>, <p>, <div>, <table>,... 
+              </body>(Closing tag)
+           </html> (Closing tag) -> Cặp đóng mở là Element
+
+  + Tại sao lại đặt CSS ở Head và JS ở cuối body: https://repl.it/@phamthai12316/RespectfulLamePassword
+  
+7 - HTML Attributes         
+  + Thuộc tính của thẻ VD: <a href="..." target="...">Thai</a> -> 
+  {
+          tagName:a,
+          attributes: href, target, ..., 
+          content: Thai      
+  }
+
+8 - Tables, List
+
+9 - Run Js on Brower
+  + Nhúng <script> zô cuối body
+  + Vì tính bảo mật nên những module đọc ghi file sẽ k sử dụng được! 
+
+10 - document object 
+  + DOM tree 
+  document.head
+  document.body
+  document.getElementById('...')
+  document.createElement('tagName');      
+
+11 - HTML Element Class
+  + HTML Element: Contructor function thừa kế từ Element <- Node <- EvenTarget
+  + $0 -> lấy ra phần tử được chọn bên elements
+  + .children(); (Element)
+  + .textContent(); (Node)
+  + .appendChild(...); (Node)
+  + .remove(); (Element)
+
+12 - innerHTML
+  + Ngược với textContent - thêm nội dung html k hiện tagName
+
+13 - onclick  
+
+14 - change event

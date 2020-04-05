@@ -1,0 +1,76 @@
+﻿- Pull request: 
+1 git checkout -b  branch
+2 git push origin branch
+3 create a pull request on Github
+4 review code
+ 4.1: review code online (github)
+ 4.2: fetch branch into local to test offline (optional)
+ 4.3: approve the pull request
+5 merge to master
+
+- kiểm tra git remote -v  xem là origin hay là gì !
+
+- conflicts: xảy ra khi 2 người cùng thay đổi 1 file mà bị trùng dòng // 1 ng thay đổi file mà ng khác lại xóa file đó
++ Lưu ý khi giải quyết conflict: người nào bị báo conflict ng đó sẽ sửa, check kĩ các branch khi xử lý conflict(pull code)
+
+1 - git init
+- git status
+- git add fileName		// git add . -> add tất cả
+- git commit -m 'description'
+
+2 - git log
+- git show
+-git diff - hiển thị thay đổi của các file có sự thay đổi nội dung
+
+3 - working directory -- Chứa những file  có sự thay đổi chưa dc add   
+- staging area	-- Chứa những file đã được add và chỉ commit dc những file này
+- repository     -- chứa các thay đổi commit
+- gitk - mở giao diện git
+
+4 - git checkout -- fileName : xóa những thay đổi trên file
+- git reset fileName : chuyển file từ staging về working dir
+
+5 -git branch - nhánh (Master là gốc, hoàn hảo nhất) -- chuyển sang nhánh khác quản lý nhiều việc khác nhau tránh lỗi master deploy web
++ git checkout -b nameBranch (thường là kiểu Vd: feature/nameBranch) -- tạo branch
++ git checkout nameBranchh -- đổi nhánh
++git branch -d nameBranch -- xóa nhánh (k thể xóa khi đang trong nhánh đó)
+- git merge - kéo thay đổi từ 1 branch sang branch khác 
++ VD Merge B -> A -> checkout A branch -> git merge B branch (Thay các thay đổi của B sẽ có trong A)
+
+6 - git reset --soft commitID  - Chuyển commit về staging area (Lúc chưa cho vào commit)
+- git reset --mixed commitID   - Chuyển commit về working dir (Lúc chưa add)
+- git reset --hard commitID   - Bỏ hết mọi trạng thái trở về ban đầu! (Như git checkout)
+
+VD: commit 1 , commit 2 , commit 3
+note : nếu git reset ở số 3 thì sẽ trở về số 3 và loại bỏ đi 2 và 1
+
+7 - git revert commitId -  Xóa đi những thay đổi và tạo thêm 1 commit mới chứa những thay đổi đã xóa
+
+note: khác với reset là revert k loại bỏ đi những commit sau nó
+
+8 - file .gitignore (giúp việc k muốn thêm 1 file khác vào commit)
+
+9 - github
+
+10 - git credential - lưu lại tk mk github (push sẽ k hỏi tk mk)
++ git config -- global credential.helper store   -- sẽ bị hiện
+not recommend (~/.git-credentials) 
++ git config --global credential.helper "cache --timeout=18000"  Lưu trong 1 khoảng tg
++ gnome-keyring // git ssh (Khuyên dùng) // keychain
+
+11 - git clone
+- git pull
+
+12 - push a branch : git push origin nameBranch
+
+13 - pull request
+
+14 - code review 
+-git fetch origin nameBranch
+
+15 - resolve conflicts
++ git rebase (master) 
++ resolve conflict
++ push again with -f
+
+16 - resolve with merge

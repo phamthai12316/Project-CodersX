@@ -1,0 +1,114 @@
+﻿
+1 số thuật ngữ : pattern: họa tiết lặp đi lặp lại
+	          parallax: 		
+	          perfix: bắt đầu 1 chuỗi 				
+
+1 - Pixel
+~ Đơn vị đo màn hình kĩ thuật số.
+~ 1 điểm ảnh(ô vuông khi zoom) là 1 px.
+~ 1megapixel = 1m pixel.
+~ 1 điểm cấu thành từ 3 màu là RGB(Red,Green,Blue).
+
+2 - Canvas(Artboard)
+~ Là khung tranh ảnh có kích thước là pixel (Width-Heigth).
+~ Đại lượng: inch-cm. 
+~ Tạo Canvas đầu tiên!
+
+3 - RGB Color
+~ RGB Full -> White
+
+~ Có 3 cách chọn màu 
+1 - Tên màu
+2 - Thập phân 0 - 255
+3 - Hex 00 - FF (Or FFF = FFFFFF, ABC = AABBCC)
+4 - Binary 00000000 - 11111111
+
+~ R = G = B -> Grey color
+~ 000000 -> Black
+~ FFFFFF -> White
+~ F00 or FF0000 -> Red
+~ 0F0 or 00FF00 ->Green
+~ 00F or 0000FF -> Blue
+
+4  - Solid & Gradient(2 màu) 
+~ Solid: Màu phẳng
+~ Linear Gradient: Kết hợp 2 màu từ ngoài vào theo cạnh ! 
+~ Radial Gradient: Kết hợp từ trong ra theo hình tròn
+~ Angular Gradient
+
+5 - Color palettes
+~ coolors.co
+~ color palettes
+
+6 - Fonts
+
+~ Serif - có râu ria
+~ Sans-serif - k có râu ria
+~ Unicode font
+~ non-Unicode font
+
+~ dafont.com
+~ Google fonts 
+
+7 - Icons
+
+~Icon fonts: 
++ Font awesome
++ Material design iconic font
++ icomoon.io
++ Google "how to enter unicode characters on Windows"
+
+~SVG icons:
++ ionicons.com
++ flaticon.com
++ materialdesignicons.com
++ google "svg icons"
+
+8 - Shapes - Hình khối
+
+~ Rectangle - Chữ nhật: Dạng vuông góc, bo tròn
+~ Oval/circle
+
+9 - Border & Spacing
+~ Border
++ Padding (Inner spacing)
++ Margin (Outer spacing)
+
+10 - Layer - Các lớp chồng nhau
+
+11 - Mark - Như avatar nằm trong shape
+
+12 - Opacity/Transparency+ - Độ trong suốt
++ Alpha(RGBA) tương tự
+
+
+13 - Blue effect - Làm mờ
+
+14 - Shadow effect - Đổ bóng
+
+15 - Consistency - Tính thống nhất
+~ Border (color, size) - VD: nhiều loại border thì nên để k border
+~ Spacing (padding,margin). - VD: không gian giãn cách đều nhau.
+~ Font(size, family). - Đồng đều kiểu, cỡ chữ thay đổi theo đúng vai trò !
+~ Shadow (x, y, blur, spread).
+~ Color (primary, secondary).
+~ Alignment
+~ Behavior
+
+16 - Reusability - Khả năng tái sử dụng.
+~ Giống như thư viện trong ngôn ngữ lập trình
+~ Dùng Symbols/Component
+
+17 - Bitmap vs Vector(Scalable)
+~ JPEG,PNG(Hiện điểm ảnh) vs SVG(Tự lấy lại nét) (Xem qua retina display)
+
+18 - 12 column grid layout(Layout: Bố trí)
+
+19 - Responsive design - Co giãn
+
+20 -
+~ behance.net
+~ dribbble.com
+~ themeforest.net
+~ learn at gooui.org
+~ 

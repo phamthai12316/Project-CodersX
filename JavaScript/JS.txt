@@ -1,0 +1,637 @@
+﻿x1 - Biến (Variable) : Khai báo: Var tên_biến = giá trị ( = là phép gán );  // Về xem CamelCase 
+VD: Var a = 1, b = 2; // Biến a, b, c có 1 ô nhớ trong Ram;
+	Var c = a + b;  // Phép tính sẽ dc CPU xử lý;    
+	console.log(c); // In ra màn hình console; 
+2 - Kiểu dữ liệu (Data type):
+Primitive Types:
++ Number: VD var a = 1 hoặc a = 1.5,...
++ String: Đại diện cho chuỗi: VD var str = "Hello" hoặc var str = 'Hello' ( Hay dùng ngoặc đơn )  VD var str = 'Hello I\'m Thai' -> Dấu gạch chéo là kỹ thuật Escape a character
++ Boolean(True, False): VD var biến = true/ false;
+Special Types:
++ undefined: K gán giá trị cho biến: VD var a;
++ null: Là giá trị rỗng: VD var a = null;
+Reference Types:
++ Object(Đối tượng): Miêu tả thuộc tính(Property) của biến (hay mô tả biến bằng thuộc tính của nó): Cú pháp: Var biến = { key: value, key: value,...};
+(VD: Var myGirl = {
+name: 'Lợn',
+nickName: 'Chó',
+age: 70,
+gender: 'Les',
+weight: '60'
+isBeautiful: false}; )
+~ Thay đổi thuộc tính Key bên ngoài bằng cách: Tênbiến.key = giá trị muốn thay đổi; hoặc dùng string là Tênbiến['Key']=Giá trị muốn thay đổi;
+~ Truy suất(In ra) Object bằng cách gõ Console.log(Tênbiến), thêm (Tênbiến.key) để truy suất từng thuộc tính; Hoặc dùng string là console.log(Tênbiến['Key']);
+~ Truy suất bằng cách : Biến.key; hoặc biến['key']
++ Array: Lưu trữ 1 list phần tử
+~ Terms: Array, Element( Phần tử ), Index( Chỉ số ), Length(Độ dài);
+~ Cú pháp: Var Tênmảng = [phần tử, phần tử, ...]  -> Mảng có n phần tử với độ dài là n và chỉ số bắt đầu từ 0 tương ứng với phần tử đầu !
+	Hoặc Var Tênmảng = [{Bên trong là các thuộc tính}];
+VD var numbers = [2,4,6] -> Mảng có 3 phần tử , độ dài là 3 tương ứng với chỉ số 2 trên mảng, chỉ số 0 = Phần tử 2;
+~ Truy suất vào phần tử trong mảng: Console.log(Tênmảng[Chỉ số index tương ứng]);
+~ Truy suất vào từng thuộc tính trong phần tử: Console.log(Tênmảng[Chỉ số index tương ứng].key);
+~ Thay đổi phần tử trong mảng: Tênmảng[Chỉ số index tương ứng với phần tử muốn đổi] = Tên phần tử đổi cho; ( Như phép gán )
+3 - Biểu thức toán học (Arithmetic Operators) ( Sắp xếp theo thứ tự ưu tiên từ trên xuống VD: a=a+1 -> a+1 thực hiện trước -> kết quả sẽ là phép gán với a)  (Còn có nhiều biểu thức dc ưu tiên hơn)
+~ Phép tăng giảm: ++ -- (Increment/decrement): sự khác biệt giữa a++(sẽ in ra giá trị ban đầu ở câu lệnh a++, và ngày sau khi xong a++ thì a++ sẽ tăng luôn đơn vị) và ++a(In ra ngay giá trị lun)
+	VD: a++; a -> thêm biến a nữa -> kq sau tăng / ++a -> kq tăng lun; VD a=5, a++ = ++ a = 5 + ++a = 5 + 7 = 12
+~ * / %( Chia lấy dư)
+~ + -	
+
+VD a=5
+a++ + ++a - --a + a--;
+5     + ++a - --a + a--; / a = 6
+5     + 7     - --a + a--; / a = 7
+5     + 7     -   6 + a--; / a = 6
+5     + 7     -   6 + 6  ; / a = 5
+-> kq: 12	
+4 - Phép gán (Assignment operators) 
+~  =  +=  -=  *=  /+
+5 - Hàm (Function)
++ Syntax(cú pháp): function doSomething(input1, input2,...){  // function có tên // Anonymous Function là function k tên: function(input1, input2...) chỉ dc sd khi đứng trong object
+//code, code logic
+return something(tên hàm hoặc logic nào đó);
+}
+~ Keyword: function, return.
+~ Function Name: doSomething.
+~ Parameter(Tham số) Names: input1, input2. 
++ Execute/Call a function (Gọi hàm): doSomething(input1, input2,...)
+VD: function calculateTriangleSquare(a, h){   // hàm tính diện tích tam giác.
+return a * h / 2;
+}
+       calculateTriangleSquare(10, 5) // Gọi hàm với tham số tuyền vào là input1, input2.
+VD2: function calculateDiscSquare(r){
+return r*r*3.14;
+}	
+       calculateTriangleSquare(10)
+6 - Phương thức của Object (Object methods ) Khi thuộc tính trong object có 1 function thì khi đó function đó chính là method.
+VD: var myDog = {
+weight: 5,
+name:'Đần',
+age:1,
+bark: function(){
+               console.log('Meo meo, my name is', this.name); // this chỉ tên object mà method function thuộc về == myDog.name; khi không có thuộc tính sau this -> thuộc tính đó sẽ thành undefined	
+   }
+eat: function(bone){
+	this.weight = this.weight + bone.weight;
+	return this;
+   }
+};
+var bone = { weight:0.5 };
+console.log("Before eating,", myDog.weight);
+myDog.eat(bone);
+console.log("After eating",myDog.weight)
+// myDog.bark().
+7 - Các phép so sách ( Comparison Operators )
+~ > >= <=, === !==( so sánh cả kiểu dữ liệu) chỉ dùng để so sánh kiểu dữ liệu nguyên bản (Primitive type) còn Object hay array thì khác.
+8 - Vòng lặp (For loop,..)
++Syntax: for (init 1; condition 2; final-expression 4){  // 1-> 2 ->3 -> 4 -> 2 ->3 -> 4 -> false -> exits
+statement 3;
+} // exit(if 2 is false)
+Keyword: for.
+The loop exits when 2 is false
+VD: for (var i = 0; i<10; i++){
+	console.log(i);
+}
+b1: i - 0;
+b2: 0<10 -> true;
+b3: display 0;
+b4: i++; ( i = 1); tiếp tục cho đến khi i = 10 -> condition sai -> false -> nhảy ra ngoài for và kết thúc
+VD2: for(var i = 9; i>=0; i--){
+	console.log(i);
+}
+VD3: var employees = [
+	{name:'Huy', age: 28},
+	{name:'Hu', age: 27},
+	{name:'H', age: 26}
+]
+for(var i=0; i<3; i++){    // i<3 thì sẽ đủ cho 3 phần tử trong mảng tương ứng với: console.log(employees[0].name) -> [2] 
+console.log(employees[i].name, employees[i].age);
+}
+9* - For of/ for in (For of sử dụng để show ra 1 object, lấy ra value, For in để show ra 1 thuộc tính trong object, lấy ra index)
+~ For of: for(var employee of employees){  // Không có giá trị đầu vào. Ứng dụng trong frontend: xem ảnh ForOf.jpg
+console.log(employee.name);
+}
+~ For in: var myDog = {
+	name: 'Đần',
+	age: 1
+} for(var key in myDog){
+	console.log(key, myDog[key]);   // cách in ra 1 object []   // key là name... value là đần...
+}
+10 - Phương thức của mảng (Array methods) - Xem trên Mozilla Developer Network    + Có thể VD: a.key().key().key(),... để nối liên tiếp các obj.
+~ a.concat(b) Nối mảng(Hoặc số) b vào cuối mảng a, a vẫn giữ nguyên số phần tử -> gán cho cái mới khác // các phương thức này phải log mới ra kq, không log sẽ ra độ dài
+~ a.push(b) Nối mảng(Hoặc số) b vào cuối mảng a, a thay đổi số phần tử luôn.  -> muốn lưu giá trị mất đi thì gán cho biến khác. VD: c = a.push(b)	
+~ a.pop(b) Đẩy phần tử cuối ra khỏi, a thay đổi số phần tử luôn. -> Có thể khai báo b hoặc đưa luôn vào trong biểu thức.
+~ a.shift(b) Đẩy phần tử đầu ra khỏi, a thay đổi số phần tử luôn.
+~ a.unshift(b) Thêm phần tử b vào đầu mảng a, a thay đổi số phần tử luôn.
+
+11 - Callback Function (Gọi hàm - Dùng hàm như 1 tham số)
+VD:     var coffeeMachine = {
+	makeCoffee: function(onFinish){                      //onFinish là 1 hàm 
+     		console.log('Making coffee...');
+		onFinish();		         // Sau khi thực hiện xong sẽ callback lại	
+	}
+};
+           var beep = function(){			         // Khi gọi beep tương tự nghĩa là gọi lại onFinish để sử dụng tiếp	
+	console.log('Tit Tit');
+};
+coffeeMachine.makeCoffe(beep);              // C1
+coffeeMachine.makeCoffe(function(){	   // C2	
+	console.log('Bip bip');
+});
+
+12 - Array.map - Thay đổi thành mảng khác từ mảng cũ thông qua codelogic.
+~ Syntax: arr.map(function(item){
+// transform function // VD item*2;
+return newValue;
+})
+VD: var numbers = [1,2,3,4];
+var squareNumbers = numbers.map(function(item){
+  return item*item;
+});
+squareNumebers;
+
+13 - Array.filter - Lọc giá trị false
+~ Syntax:  arr.filter(function(item){
+// filter function // VD item%number === 0; -> lọc ra giá trị thỏa mãn.
+return newValue; // true or false
+});
+VD: var numbers = [1,2,3,4];
+var evenNumbers = numbers.filter(function(item){
+  return item % 2 === 0;  -> show ra 2 4.
+});
+evenNumbers;
+
+14 - Array.find - Tìm giá trị true  -> Chỉ show ra giá trị đúng đầu tiên
+~ Syntax:  arr.find(function(item){
+// find function // VD item%number === 0; -> Tìm ra giá trị thỏa mãn.
+return newValue; // true or false
+});
+VD: var numbers = [1,2,3,4];
+var findNumbers = numbers.find(function(item){
+  return item % 3 === 0; -> show ra 3.
+});
+findNumbers;
+
+15 - Array.reduce - Giảm / kết hợp 2 giá trị
+~ Syntax: arr.reduce.(function(item1,item2){    -> 2 item kết hợp thành 1;
+// calculation
+return newValue;
+});
+VD: var numbers = [1, 2, 3, 4];
+numbers.reduce(function(a,b){
+// console.log(a, b); để xem giá trị.
+return a+b;	-> Cộng dần -> 1 + 2 -> 3, 3 + 3 -> 6, 6 + 4 -> 10;
+});
+
+15.1 - Array.reduce 2 -
+~ Syntax: arr.reduce.(function(item1,item2){    -> 2 item kết hợp thành 1;
+// calculation
+return newValue;
+},init);    // Lấy init làm tham số đầu tiên -> coi như là thêm 1 giá trị.
+16 - Array.sort - Sắp xếp mảng
+~ Syntax: arr.sort(function(a, b){    -> so sánh a với b
+// sort function								
+return newValue;
+}); 
+// if sort function
+	// returns a value < 0 -> a will come before b
+	// returns a value > 0 -> a will come after b
+	// returns 0 -> a will stay unchanged b
+
+VD:
+var numbers = [2, 9, 3, 4, 1];
+// [1, 2, 3, 4, 9] // ascending order
+var ascendingNumbers = numbers.sort(function(a,b){
+// assume: a = 1, b = 4
+return a - b;
+});
+ascendingNumbers;
+
+// [9, 4, 3, 2, 1] // descending order
+var descendingNumbers = numbers.sort(function(a,b){
+// assume: a = 3, b = 4;
+return b - a;
+});
+descendingNumbers;
+
+17 - Math Object - Xem Mozilla Math Object.
+~ Math.PI -> Số pi
+~ Math.ceil(number) //ceiling(Trần ) -> Làm tròn lên (Số thập phân)
+~ Math.floor(number)  -> Làm tròn xuống (Số thập phân)
+~ Math.max(x1, x2, ...) -> so sánh max. 
+~ Math.min(x1, x2, ...) -> so sánh min.
+~ Math.random() -> sinh ra số ngẫu nhiên từ 0 -> 1 
+
+18 - `new` Keyword - tạo ra cái/object mới -> ứng dụng: nhân n lần mà k cần thêm function
+VD:  2 Cách tạo 1 đối tượng.
+
+C1: var mouse = {		// Tạo ra 1 object literal
+	weight: 0.2,
+	getWeight: function(){
+   		return this.weight;
+    }
+};
+// constructor function
+C2: function Mouse(color, weight){  // function lấy các key của obj mouse	 			
+	this.type = 'mouse';
+	this.color = color;     // có thể k cần thêm biến color ở khai báo hàm và thay vào đó là this.color = 'white';     -> function Mouse(// trong này k cần color, white)
+	this.weight = weight; // có thể k cần thêm biến weight ở khai báo hàm và thay vào đó là this.weight = '0.5';
+}
+var mouse1 = new Mouse('white', 0.2); // tạo color và weight tương ứng với this.color = color,..   // hoặc có thể để new Mouse(); thì sẽ lấy obj mouse;
+var mouse2 = new Mouse('black', 0.5);
+console.log(mouse1);
+console.log(mouse2);
+
+var tom = {
+	name: 'Tom',
+	stomach: [],
+	eat: function(mouse){
+   		this.stomach.push(mouse);
+		return this;	
+    }
+};
+
+var m1 = { name : 'm1' };
+var m2 = { name : 'm2' };
+var m3 = { name : 'm3' };
+
+tom.eat(m1).eat(m2).eat(m3);
+console.log(tom);
+
+
+19 - Prototypes (Khuôn mẫu) - Phân biệt Constructor function vs normal function: xem ảnh So sánh Function.
+- Prototype dc chia sẽ giữa các object bằng new.
+VD: function Mouse(color,weight){
+	this.type = 'mouse';
+	this.color = color;
+	this.weight = weight;
+}
+Mouse.prototype.sleep = function(){
+	console.log(this.color + 'Sleeping...');
+};
+var jerry = new Mouse('orange', 20);
+var mickey = new Mouse('white', 10);
+jerry.sleep();
+mickey.sleep();
+ 
+20 - Node module - Phân thành file nhỏ dùng module.exports = ... để liên kết lại.
+gọi ra bằng cách var ... = require('./file đó');
+21 - Node built-in modules. -> module có sẵn kp tự định nghĩa
+~ File system = fs.
+~ fs.readFileSync(path[,options]). -> đọc file.
+~ fs.writeFileSync(file,data[,options]). -> tạo file.
+
+22 - JSON Methods 
+~ stringify - Convert an object to a JSON string.
+~ parse - Convert a JSON string to an object
+-> có dấu ngoặc kép.
+VD: 
+// JSON object
+// stringify - Convert an object to a JSON string.
+// parse - Convert a JSON string to an object
+
+var myDog = {name: 'Milu', age: 1, dead: false};
+var myDogString = JSON.stringify(myDog);
+
+var myCatString = '{"name": "Tom", "age": 2, "dead":true}';
+var myCat = JSON.parse(myCatString)
+// console.log(myDogString);
+console.log(myCat.name);
+23 - If...else ( Nếu ... khác) - Xem lệnh break, continue,..
+~Syntax:
+if (condition){
+statement when condition true;
+} else { 
+statement when condition flase;
+}
+VD:
+// Tung đồng xu dùng random()
+function tossCoin(){
+  var value = Math.random();
+  if (value < 0.5){
+    console.log('Mặt sấp');
+  } else {
+    console.log('Mặt ngửa');
+  }
+}
+tossCoin();
+
+// Đếm tiền và phân biệt tiền giả 
+function countBills(bills){
+  var total = 0;
+  for (var bill of bills){
+    if(!bill.fake){
+      total += bill.value;
+    } else {
+      console.log('Fake bill',bill);
+    }
+  }
+  return total;
+}
+var bills = [
+  { value: 10000},
+  { value: 20000},
+  { value: 20000, fake: true},
+  { value: 500000}
+];
+
+var total = countBills(bills);
+console.log(total);
+
+24 - Ternary Operator (Toán tử 3 ngôi)
+~Syntax:   Condition ? Expression when conditon true : expression when condition false.
+VD: 
+function tossCoin(){
+var value = Math.random();
+var result = (value < 0.5) ? 'Mặt sấp' : 'Mặt ngửa';
+= // if (value < 0.5){ 
+//result = 'Mặt sấp';
+//} else {
+//result = 'Mặt ngửa';
+//}
+console.log(result);
+}
+tossCoin();
+25 - If ... else if ... else (Nếu ... hoặc nếu ... khác)
+~ Syntax:
+if(condition1){statement1;}
+else if(condition2){statement2;}
+else {statement3};
+VD:
+// Calculate bus ticket fee
+// if age < 15, discount 20%
+// if age > 60, discount 10%
+// otherwise 10000/ticket
+function getTicketFee(person){
+  var basePrice = 10000;
+
+  if(person.age < 15){
+    return 10000 + 0.8;
+  }else if(person.age > 60){
+    return 10000 + 0.9;
+  } else {
+    return basePrice;
+  }
+}
+
+var person = {
+  age: 105
+}
+var fee = getTicketFee(person);
+console.log(fee);
+
+26 - Switch ... case
+~Syntax: 
+switch (expression) {
+case value1:
+ // do something;
+break;
+case value2: 
+// do something;
+break;
+...
+default:
+// do something;
+break; 
+}
+VD: 
+	// bronze, silver, gold, diamond
+	// discount:
+	// bronze: 2%
+	// silver: 5%
+	// gold: 8%
+	// diamond: 10%
+	var memberCard = {
+ 	 tier: 'silver'
+	};
+	function getTotal(price, card){
+ 	 var discountRate;
+  	switch (card.tier){
+   	 case 'bronze': discountRate = 0.02
+   	 break;  // thay vì break thì có thể return luôn giá trị.
+    	case 'silver': discountRate = 0.05
+   	 break;
+  	  case 'gold': discountRate = 0.08
+    	break;
+    	default: discountRate = 0.1;
+   	 break;
+	  }
+  	// if (card.tier === 'bronze'){
+ 	 //   discountRate = 0.02;
+ 	 // } else if(card.tier === 'gold'){
+ 	 //   discountRate = 0.08;
+ 	 // } else {
+  	//   discountRate = 0.1;
+  	// }
+  	return price * (1 - discountRate);
+	}
+	var total = getTotal(500000, memberCard);
+	console.log(total);
+
+	// red, green, orange
+	var trafficLight = 'green';
+	function goOrNotInVietNam(lightValue){
+  	switch (lightValue){
+  	  case 'green':
+   	 // console.log('go);
+  	  // break;
+	    case 'orange': // kết hợp khi có 2 câu lệnh giống nhau
+  	    console.log('go');
+  	    break;
+ 	   default:
+    	  console.log('stop');
+    	  break;
+  	}
+	}
+	goOrNotInVietNam(trafficLight);
+
+27 - While, do ... while loops
+~Syntax:
++ while(condition){
+	// do something
+}
+VD: 
+var i = 1;
+while (i<=10){
+	console.log(i);
+	++i;
+}
+console.log(i);
+~Syntax:
++ do {
+ 	// do something
+} while (condition)
+VD:
+var i = 1; 
+do{		// chạy 1 lần trước khi kiểm tra
+ console.log(i);
+ ++i;
+} while(i <= 10);
+
+28 - Sync vs Async (Synchoronous vs Asynchronous ) -> (Đồng bộ và bất đồng bộ)
+~ Sync - Đợi xong việc rồi làm tiếp 
+VD: var fs = require('fs');
+
+console.log('Start');
+var song1 = fs.readFileSync('song1.txt', {encoding: 'utf8'});
+console.log(song1);
+var song2 = fs.readFileSync('song2.txt', {encoding: 'utf8'});
+console.log(song2);
+console.log('End');
+
+~ Async - Làm liên tục k đợi vc trước xong ( Callback )
+VD: console.log('Start');
+fs.readFile('song1.txt', {encoding: 'utf8'}, function(err,data){
+console.log(song1);
+});
+console.log('End');
+
+29  - Callback hell (Pyramid of doom, hadouken) -> (Code kim tự tháp, code rối, code lồng nhiều,...)
+- Giảm thời gian chạy. 
+
+30 - Promise
+~ npm install --save promise-fs
+~ .then, . catch là 1 methods của promise
+31 - Promise,all
+32 - Node co (Xem generator function)
+~Syntax: 
+co(function*(){
+
+})
+
+33 - Async  await
+34 - setTimeout - Đặt tg làm 1 việc.
+VD: 
+// setTimeout(fn,ms)
+setTimeout(function done(){
+  console.log('Thai')
+},1000)  // chạy sau 1s
+// hoặc
+function done(){
+  console.log('Thai');
+};
+setTimeout(done,1000);
+// hoặc
+var done = function(){
+  console.log('Thai');
+};
+setTimeout(done,1000);
+- clearTimeout;
+var timeoutID = setTimeout(done,1000); 
+clearTimeout(timeoutID) 
+
+35 - setInterval  - Đặt tg lặp lại việc.
+VD:
+// setInterval 
+var i = 0;  
+var intervalID = setInterval(function(){  
+  ++i;   
+  console.log(i);
+  if (i==5){
+    clearInterval(intervalID); // dừng chạy i.
+  };
+},1000) // lặp lại việc in ra i sau mỗi 1s;
+
+35 - Date 
+VD:
+// Date 
+// moment.js
+var moment = require('moment');
+var now = newDate; // lấy thời gian hiện tại và tính ra số s trờ về 1970;
+var myBirthday = new Date(1999, 5, 26); //Số tháng tương ứng với index. tháng 1 = index 0;
+// number of milliseconds from 1-1-1970
+console.log(now.getTime());
+console.log(myBirthday.getTime());
+
+var now = moment('2019-07-08 00:00'); // Tính ngược tg
+console.log(now.format('YYYY/MM/DD'));
+
+36 - Scope - Phạm vi hoạt động của biến
+~ Global scope - Truy cập dc vào local - có thể bị thay đổi trong local - Biến toàn cục - ;
+~ Local scope - K truy cập dc vào global - Biến cục bộ
+
+
+Note: sửng dụng `${ Biến gán giá trị String}` để lấy giá trị string đã đc gán ở biến! 
+VD:const myPet = 'armadillo';
+      console.log(`I own a pet ${myPet}.`);		tượng tự có thế log ra string trong ` ...  ` dc như dấu '...'
+Phân biệt let với var và const : 
+			let vs var: let phạm vi trong hàm, var phạm vi toàn cục Nên dùng let
+			const : K thay đổi được giá trị
+
+If else: Câu lệnh điều kiện ! Nếu đk của if sai thì câu lệnh trong else sẽ được thực hiện
+
+Truthy and Falsy:
+Truthy: Giá trị khác falsy
+Falsy: 0, " ", ' ', null, undefined, NaN(Not a Number)
+
+Dùng || Để có thể đánh giá truthy và falsy trên cùng 1 if ( Câu lệnh rút gọn) 
+VD:let writingUtensil = tool || 'pen' ! Gán tool nếu tool truthy hoặc nếu tool falsy thì gán 'pen'! Kiểm trả từ phải qua
+
+VD nếu thay giá trị tool = ' sdfdfsd' thì lúc này giá trị tool ban đầu sẽ dc dùng
+
+Switch case ! Lưu ý phải để break ở sau mỗi khối ! nếu k ct sẽ trả toàn bộ kết quả ở các case khác bên dưới
+
+37. Function (2)
+- Parameter and Arguments (Tham số, đối số)
+- Return
+- Function gọi function
+- Function gán biến
+- Arrow Function:const Tên hàm =  (Tham số) => {}
+- Arrow Function rút gọn: 
+- KHI DÙNG HÀM GET SET THÌ K THỂ TRUYỀN GIÁ TRỊ VÀO FUNCTION NHƯ BÌNH THƯỜNG MÀ DÙNG TOÁN TỬ = ĐỂ GÁN
+
+
+38. Block and scope
+Trong 1 khối có dấu {} là block
+
+Global scope: Biến toàn cục được khai báo bên ngoài và có thể sử dụng trong hàm (block	)
+
+Block scope (Local scope): Biến cục bộ chỉ sử dụng trong hàm
+
+Scope Pollution: Lỗi biến khi khai báo cả bên toàn cục lẫn cục bộ
+
+39. Array 
+- Nếu gọi index k có trong array thì sẽ là undefined
+- update element
+- biến con có thể thay đổi giá trị nếu là mảng
+- .length để lấy ra độ dài mảng
+- .push() thêm phần tử vào cuối mảng
+- .pop() xóa phần tử ở cuối mảng
+- .shift() sắp xếp lại mảng theo thứ tự ASC(Ascending A->Z) 
+- .unshift() thêm phần tử vào đầu và vẫn sắp xếp
+- .slice() lấy ra phần tử mong muốn theo index
+- indexOf() lấy ra chỉ số index của phần tử muốn lấy
+
++ Array and Function -> Tham chiếu
++ Nested Arrays
+
+40. Loop
+
++ Loop Array
++ Nested Loops
++ For, while, dowhile , Break
+
+41.Higher-order-function
+
+42. Iterator (Lặp)
+forEach(). lặp qua mảng k cần đkz ! Trả về undefined
+.map() Trả về mảng mới 
+.filter()
+.findIndex()
+.reduce() tính toán
+.some() Trả về kiểu boolean
+
+43. Object (Đối tượng) bảo gồm key và value
+- var tên = {}
+- Sử dụng this:  function arrow trong object ! thì k thể gọi this trong nó gọi ra các thuộc tính bên ngoài~ this trong function arrow chỉ gọi thuộc tính trong nó!
+- thêm _ trước key để bảo toàn giá trị! (Như biến const)
+- getter
+- method object
+
+44. Class
+- class tên {}
+- Kế thừa (Sử dụng extends)
+- Static method : Sẽ chỉ sử dụng trong class đó và k dc sửa dụng ở lớp kế thừa hoăc lớp khác
+
+45. Npm 
+- npm i babel: giúp ES6 chuyển hóa sang ES5
+- 

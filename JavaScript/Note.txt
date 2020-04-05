@@ -1,0 +1,17 @@
+﻿Chú ý:
+- Xem lại các bài tập.
+- Xem lại bài tập vòng lặp for.
+- Xem lại bài tập về array.method
+- Xem lại call back function
+- Xem lại arr.reduce
+- Xem lại new keyword
+- Xem prototype
+- Xem về cmd và cli(comand line inteface)
+- Xem về phần node
+- asyc , promise
+- axios, request
+
+https://gist.github.com/chitao5799/c3d1922d1330b2a5d5d08e8f5da7f1b2 : bt codersX
+https://gist.github.com/chitao5799/f2f8fd21174aa48fbb784e0b7a31ce83 : bt video 50
+kiểm tra web: gtmetrix.com
+web.dev

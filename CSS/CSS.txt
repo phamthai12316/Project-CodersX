@@ -1,0 +1,316 @@
+﻿CSS 
+
+Css-tricks:
+- https://css-tricks.com/creating-css-sliding-door-effect/
+- https://uigradients.com/#BetweenTheClouds : lấy màu gradient
+- * là giá trị mặc định
+- https://neumorphism.io/
+- https://coolors.co/ // lấy bảng màu hợp nhau
+- CSS trick
+- CSS gradient.io
+- CSS selector cheat sheet
+- tympanus.net - tính selector
+- easings.net - xem transition
+- https://picsum.photos/- lấy ảnh
+- select 2 class thì cho dấu ' , ' vào
+- https://www.flaticon.com/free-icons/library
+http://jkorpela.fi/styles/spaces.html : kiểm tra space = px
+just color picker : xem mã màu
+
+- https://www.cssmatic.com/box-shadow: chỉnh box-shadow
+- https://wweb.dev/resources/css-separator-generator : background sóng
+
+https://github.com/astrit/css.gg?fbclid=IwAR3ZAHBQCVxroRBjxvOqNtM8MRrArrMndSTWwVpWFtdEIHzmh8mMEBVUyBA
+
+1 - Syntax 
+~ Selector{
+         property:value; property:value;...
+}
+
+2 - Css Selector (Part1)
+
+~ Select by HTML tag name.
+~ Select by element ID ('.').
+~ Select by class name ('#').
+~ Select a group (VD: tag, tag, tag, id, id, class,...{})
+
+3 - CSS colors
+
+~ RGB Hex(#00FF00)
+~ rgb(red, green, blue)
+~ rgba(red,green,blue,alpha)
+
+4 - Styling text
+
+~ color:...
+~ text-align: center | left | right | justify(căn đều cả 2 và cách giữa) - căn lề
+~ text-decoration:none | underline | overline | line-through - gạch(có thể bỏ gạch chân ở link tag) 
+~ text-transform: uppercase | lowercase | capitalize(chữ đầu in hoa) - in hoa
+~ text-indent: px - lùi chữ đầu dòng
+~ letter-spacing: px - khoảng cách chữ
+~ word-spacing: px - khoảng cách từ
+~ line-height: 1.2 // a number - khoảng cách dòng
+~ text-shadow: Xpx Ypx color - đổ bóng
+
+~ Có thể thay đổi trên Chorme
+~ Tham Khảo CSS cheatsheet
+
+5 - 3 cách chèn CSS
+
+~ chèn thẻ style trong HTML: <style type="text/css">...</> thường để trong thẻ head để đọc trc
+~ chèn thuộc tính style trong thẻ mở: <p style="color: red"></p>
+~ link từ file css khác đến file HTML: <link rel="stylesheet" type="text/css" href="path"> (Phổ biến)
+
+6 - Custom fonts
+~ font-family: font1, font2, font3 (import từ google fonts hoặc có thể xem css font-face)
+~ font-style: normal | italic | oblique
+~ font-size: px
+~ font-weight: normal | bold | 400 | 600 | 700 | 900,...
+
+7 - live-server - trình duyệt tự load lại thay vì phải f5
+
+8 - padding - k/c bên trong border đến content
+~ padding-top/right/bottom/left
+~ padding: top roght bottom left
+~ padding: top left-right bottom; TH 3 
+~ padding: top-bottom left-right; TH 2
+~ padding: all;
+
+9 - Margin - kc bên ngoài border 
+
+~ syntax giống padding  
+
+10 - Border - viền
+
+~ border-width: px
+~ border-style: solid | dotted | dasher | ...
+~ border-color: ...
+Shorthand:
+~ border: px solid red;
+Note:
+~ border-width: top right bottom left
+~ border-width: top left-right bottom
+~ border-width: top-bottom left-right
+
+~ border-top-width: px
+~ border-right-width: px
+
+~ border-radius
+
+11 - background-color - màu nền
+
+~ background-color: color
+~ background-color: transparent;
+~ background-color: gradient; GG search CSS gradient
+
+12 - bachground-image - ảnh nền
+*: giá trị mặc định
+
+~ background-image: url(...) (Đối với ảnh k cùng kích thước thì sẽ bị lặp đi lặp lại)
+~ background-repeat: repeat-x(trục ngang) | repeat-y | no-repeat | repeat* | ... lặp đi lặp lại
+~ background-size: % | contain(hiện thị đủ nhưng sẽ lặp nếu thừa kích thước) | cove(chuẩn)r | auto* | ...
+~ background-position: x y | center  - thay đổi vị trí ảnh
+~ background-attachment: scroll* | fixed - có hiệu ứng parallax cuộn...  
+
+13 - icon - 
+
+~ Fontawesome hoặc material icons
+~ Boostrap  
+
+14 - styling links
+~ States:
+a(class name):link {}  đổi style ở trạng thai chưa click
+a:visited {} đổi style sau khi đã được click
+a(class name):hover {} đổi style khi chỉ chuột vào
+a(class name):active {} đổi style khi click vào mà chưa nhả
+~ Hạn chế sử dụng tên thẻ: dùng class
+
+15  - Lists & table - W3School
+
+~ list-style-type: circle | square | upper-roman | lower-alpha | none;
+~ list-style-image: url('...');
+~ list-style-position: outside | inside;
+~ list-style: square inside url('...'); - Shorthand
+
+
+16 - display:Inline/block
+~ inline(cùng dòng)
++ k có width height
++ margin chỉ có left right
++ padding có tất
+~ block(chiếm hẳn 1 dòng)
++ k có width height(chỉ cho content)
++ có tất margin, padding
+
+17 - CSS combinators - Tạo ra nhiều selector
+
+descendant selector(space) - body h1 .class {} - Chọn từ thằng to nhất đứng đầu rồi tiếp tục
+child selector (>) - body > h1{} - chỉ muốn chọn thằng con k vào cháu 
+adjacent sibling selector (+) - h1 .class-1 + .class - chỉ chọn thằng anh em kế tiếp(class2) (k chọn thằng class 1))
+general sibling selector (~) - h1 .class-1 ~ .class - chọn tất cả thằng anh em kế tiếp.
+
+18 - Pseudo-class & Pseudo-element.
+
+19 - Flexbox (Part1) - Module làm layout
+
+~ display: flex;
+~ flex-direction: row | column |
+
+20 - Flexbox (Part2) - 
+
+~ justify-content-- Căn chỉnh thằng con theo hướng của flex-direction VD: - - - sẽ kéo sang ngang
+  flex-start* (Trái) 
+| flex-end(Phải) 
+| center      
+| space-between(Chia đều khoảng cách) 
+| space-around(Chia khoảng cách có ở đầu, khoảng trổng ở giữa bằng 2 ở đầu) 
+| space-evenly(Chia đều khoảng cách cả đầu cuối) 
+~ align-items:  -- Căn chỉnh theo hướng ngược lại của flex-direction VD - - - sẽ kéo xuống dưới 
+  flex-start 
+| flex-end 
+| center 
+| baseline 
+| stretch* (Width hoặc Height = phần tử cha)
+
+21 - Flexbox(Part3)
+
+~ flex-basis: <length>;  - độ dài box
+
+22 - Flexbox(Part4)
+
+~ flex-grow:  0* | <number>; -  chia phần cho phần tử con! chia đủ theo flex! VD để cả 3 là flex-grow: 1 thì chia đều 3 phần: 900px -> 300 300 30001 
+
+23 - Flexbox(Part5)
+
+~flex-shrink: 1* | <number>; - cắt phần tử con sao cho đủ độ dài của content -- chia theo công thức!
+Nếu là flex-shrink: 0, thì sẽ giữ nguyên phần tử đó và cắt phần tử khác
+
+24 - Flexbox(Part6)
+
+~ order: 0* | <number>  - đảo ngược vị trí 2 phần tử
+
+25 - Position (Part1) - dịch chuyển
+
+~ position: static* | relative(dịch chuyển tương đối xung quanh vị trí của nó )  kèm theo top bottom left right:
+
+26 - Position (Part2)
+
+~position:  fixed(Dịch chuyển tương đối theo của sổ trình duyệt, áp dụng khi cuộn mà k thay đổi vị trí) 
+27 - Position (Part3)
+~ position:absolute (Dịch chuyển theo phần tử cha to hơn nào có positon:relative! nếu k có thì sẽ theo trình duyệt) 
+| sticky
+
+28 - Float:left | right
+~ clear:left | right | both!  (Bỏ float)
+
+29 - CSS Selector (Part2) - Attribute Selector
+
+~ tag[attribute | (attribute="value")] {
+}
+
+30 - CSS Specificity - Tính cụ thể - Có công thức tính: !important > inline style > id > class > element
+
+ - Trình duyệt chọn css cụ thể nhất	
+ - Giống nhau thì css sau sẽ override(đè) lên css trc 
+
+31 - CSS 2D Transform - Thay  đổi hình dạng - tympanus.net
+
+~ transform: ...(px | % | deg);
+
+~ translate - dịch chuyển
+~ rotate - xoay
+~ scale - thu phóng
+~ skew - biến dạng
+~ matrix -
+
+32 - Transition - easings.net
+
+~ transition: all 0.5s; 
+
+33 - Media query -- responsive
+
+~ @media (max-width | min-width: ...px){
+Các khối css
+}
+
+34 - Gird
+
+~ display: grid;
+~ grid-template-colums ...: 
+
+35 - px em rem
+
+~ em = 16px
+~ rem = 
+
+
+NOTE:
+1: Selector
+Độ ưu tiên:
+Chọn selec từ dưới lên
+
+Id -> .class tag -> tag
+
+Chọn cùng nhau: tag,tag{}
+Review Visual Rules: 
+font family, font size, font weight, color, bg-color, text-align,ovelay(opacity), bg-image:url("")
+2. Box Model:
+Width-height, border(size style color) default is medium, border-radius, padding(padding: px px / toppx rightpx bottompx leftpx/ padding-left,right,...),margin(same padding, auto)
+min-height, max-height, overflow(căn chỉnh phần nd thừa tràn ngoài box: default visible(Hiển thị ra ngoài), scroll, hidden)
+reset default: margin:0, padding:0;
+visibility(hidden,visible)! hidden khác với display:none ! hidden ẩn đi nhưng khoảng trống vẫn còn
+
+Xem margin collapse
+2.1: Change box model
+dùng box-sizing: border-box để tổng kích thước content, border,.. bằng đúng kích thước mình muốn
+
+3. Flow (Vị trí) (position, display, z-index, float, clear)
+position: static(default), 
+relative(Di chuyển so với vị trí ban đầu, đi kèm top, left,...),
+absolute(di chuyển so với phần hộp của nó! mặc định đứng ở góc trên bên trái, đè lên những phần khác)
+fixed: Cố định khối tại 1 vị trí
+z-index: khi khối có position thì khi cuộn sẽ bị các phần khác chèn nội dung lên! z-index giúp khối position nổi lên và che đi các khối khác
+
+4: diplay
+inline
+block
+inline-block
+
+5.float
+
+6.clear
+
+7.color
+hex(hệ thập lục phân(16 chữ số từ 0-9 theo sau là A hoặc F bắt đầu bằng #)),rgb,hsl(Hue, Saturation, and Lightness)
+opacity(rgba,hsla) a: alpha/ rgba (0,0,0,0) = transparent;
+
+8. Typography
+font-family("  font nhiều chữ","phông chữ dự phòng",... ), font-weight(bold/ 500), font-style(italic), word-spacing,letter-spacing, text-tranform(uppercase)
+text-aligh(left,center,right, line-heigt(cách dòng trên dưới)
+
+Phông chữ dự phòng thích thì dùng
+font goolge(Nhúng link, emport), hoặc dùng @font-face để k phải nhúng link 
+
+9.Grid(Display:grid) Tính theo dòng kẻ 
+grid-template-columns(% / px/ em/ rem / fr)
+grid-template-rows (% / px/ em/ rem / fr)
+grid-template (Thay cho 2 caí trên: hàng / cột)
+repeat(Số lần lặp, kích cơ ảnh!)
+minmax(kích cỡ min, kích cơ max)
+fraction: fr (chia theo phần của size đã định nghĩa)
+grid-template-area
+grid-gap( grid-row-gap, grid-column-gap): Tạo khoảng trống! Ct ngắn: grid(size row, size colums) 
+grid-row-start / grid-row-end / grid: start / end
+grid-column-start / grid-column-end tương tự  
+Đi kèm span: VD span 2 / 6 thì sẽ kết thúc ở ô 6 và kéo ngược lại về 2! dùng cho cả row lẫn col
+grid-area(grid-row-start / grid-column-start / grid-row-end / grid-column-end)
+grid-template-areas:"bố cục " ! sau khi chia bố cục thì thêm phần "tên bố  cục" vào phần muốn có bố cục đó
+justify-items (start, end, center, stretch)
+justify-content
+justify-self
+align-items
+align-content
+align-self
+grid-auto-rows Tự động căn chỉnh nếu thừa
+grid-auto-columns
+grid-auto-flow Tự căn chỉnh vị trí của hàng hoặc cột

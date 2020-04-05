@@ -1,0 +1,2 @@
+﻿Note:
+obj[key] -> key trong này còn có thể hiểu là 1 biến của function nếu dc funtion truyền vào! 

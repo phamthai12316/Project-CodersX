@@ -1,0 +1,11 @@
+﻿Chú ý tìm kiếm: 
+- CamelCase 
+- Escape a character
+- Mozilla Developer Network
+- Mozilla Math Object.
+- Xem docs của Nodejs
+- Xem npmjs.com
+
+
+
+-caniuse.com : kiểm tra tương thích trình duyệt
