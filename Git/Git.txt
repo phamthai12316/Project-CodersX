@@ -39,7 +39,7 @@
 
 6 - git reset --soft commitID  - Chuyển commit về staging area (Lúc chưa cho vào commit)
 - git reset --mixed commitID   - Chuyển commit về working dir (Lúc chưa add)
-- git reset --hard commitID   - Bỏ hết mọi trạng thái trở về ban đầu! (Như git checkout)
+- git reset --hard commitID   - Bỏ hết mọi trạng thái trở về ban đầu! (Xóa cmmt) (Như git checkout)
 
 VD: commit 1 , commit 2 , commit 3
 note : nếu git reset ở số 3 thì sẽ trở về số 3 và loại bỏ đi 2 và 1

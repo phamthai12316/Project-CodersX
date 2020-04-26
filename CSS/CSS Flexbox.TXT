@@ -1,0 +1,24 @@
+	http://www.csstutorial.org/ -> flex
+
+Flexbox là một kiểu dàn trang (layout mode) mà nó sẽ tự cân đối kích thước của các phần tử bên trong để hiển thị trên mọi thiết bị.
+
+sử dụng display:flex
+mặc định là row
+flex-direction: row (trái sang)
+flex-direction: row-reverse (phải sang)
+
+flex-direction: column (trên xuống)
+flex-direction: column-reverse (dưới lên)	
+
+justify-content: flex-end (đẩy tất cả phần từ xuống cuối)
+justify-content: center (đẩy tất cả phần từ ra giữa)	 dw	
+justify-content: space-between (dàn đều khoảng cách giữa các phần tử, phần tử đầu nằm sát trái, cuối sát phải)
+justify-content: space-around (dàn đều khoảng cách giữa các phần tử, cả phần từ đầu cuối cũng dãn)
+justify-content: space-evenly (khoảng cách ở giữa hai vùng kề cận nhau luôn như nhau)
+justify-content: stretch (Giá trị này sẽ kéo giãn các phần tử cho lấp đầy flex, tuy nhiên nếu độ dài của các phần tử quá ngắn thì các phần tử sẽ float: left)
+
+align-items: flex-start
+align-items: flex-end
+align-items: center
+algin-items: stretch
+

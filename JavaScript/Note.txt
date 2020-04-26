@@ -15,3 +15,6 @@ https://gist.github.com/chitao5799/c3d1922d1330b2a5d5d08e8f5da7f1b2 : bt codersX
 https://gist.github.com/chitao5799/f2f8fd21174aa48fbb784e0b7a31ce83 : bt video 50
 kiểm tra web: gtmetrix.com
 web.dev
+
+
+https://0.30000000000000004.com/

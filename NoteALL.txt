@@ -1,0 +1,64 @@
+E chào mọi người ạ!
+
+- Trong quá trình học lập trình nói chung và CSS nói riêng, thì e có tổng hợp lại được những website - công cụ rất là hay ho và thú vị, bản thân e đã đang và vẫn sẽ dùng những công cụ này, hôm nay e chia sẻ cũng mong giúp ích được cho mọi người 1 chút nào đó ạ!
+bài viết nhiều text nên mọng mọi người thông cảm ạ!
+
+E xin chân thành cảm ơn mọi người và mong mọi người góp ý thêm nhiều thứ nữa ạ! 
+
+
+
+CSS
+
+- CSS Reference - Các thứ trong css nha
++bhttps://tympanus.net/codrops/css_reference/
+
+- Flex: 
++ http://www.csstutorial.org/ : Chỉ flex nè!
++ https://mastery.games/flexboxzombies/ : Game flex đang được free nữa.
+
+- Gradient
++ https://uigradients.com/#BetweenTheClouds : Lấy màu gradient tùy thích!
++ https://cssgradient.io/ : Tương tự trên luôn.
+
+- Box-shadow
++ https://neumorphism.io/ : Nghịch với box-shadow. 
+
+- Color 
++ https://coolors.co/ : Đang đau đầu với việc phối màu sao cho hợp thì zô đây!
++ https://annystudio.com/software/colorpicker/ -> App Just Color Picker cho bạn nào muốn check màu tất cả mọi chỗ nha!
++ https://www.colourlovers.com/palettes -
+- Transition
++ https://easings.net/ : Nghịch transition
++ https://animista.net/?fbclid=IwAR3Hjzz0iz1BMZAEJEOPCWha62CL9pEH_a4YO2PS-RdXINkSVevPGfnEmQE
+
+- Img 
++ https://picsum.photos/ : Lấy ảnh nè
++ https://loremflickr.com : Lấy ảnh nè
++ https://undraw.co/illustrations : Img
+
+- https://www.techsmith.com/screen-capture.html : Phần mềm chụp ảnh màn hình và nhiều công cụ khác, đo pixel tiện ghê! Mất phí đó, ủng hộ nhà phát hành nha hoặc có thể crack ạ!
+
+- Pixel Space
++ http://jkorpela.fi/styles/spaces.html : Kiểm tra space = px
+
+- CSS-Sperator-Generator 
++ https://wweb.dev/resources/css-separator-generator : Tạo background kết hợp kiểu sóng sóng hay chéo chéo ý ^-^
+
+- Icon 
++ https://css.gg/ : Kho icon css nha (link git tác giả: https://github.com/astrit/css.gg?fbclid=IwAR3ZAHBQCVxroRBjxvOqNtM8MRrArrMndSTWwVpWFtdEIHzmh8mMEBVUyBA)
++ https://www.flaticon.com/
+- Font
+
++ https://html-css-js.com/css/generator/font/ : Chỉnh chữ nha 
+
+- Border 
++ https://html-css-js.com/css/generator/border-outline/: Chỉnh viền nha
+
+- Grid
+
++ https://cssgrid-generator.netlify.app/ : Thằng này tự làm grid cho mình luôn nha
+
+- All 
++ https://html-css-js.com/css/generator/: Nhiều thứ lắm
++ https://epic-spinners.epicmax.co/?fbclid=IwAR0fyxdQU9EzwCxzdd8xbIRVFCJRYh9C9KNpy4aJf-tyo8QIjYTt-nurZkM : Nghịch ngợm spinner nha
++ https://cssfx.netlify.app/ : Button + Loading Effect (link tác giả: https://github.com/jolaleye/cssfx)

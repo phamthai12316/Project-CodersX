@@ -1,5 +1,8 @@
 ﻿CSS 
 
+https://mastery.games/flexboxzombies/ -- học flexbox
+
+
 Css-tricks:
 - https://css-tricks.com/creating-css-sliding-door-effect/
 - https://uigradients.com/#BetweenTheClouds : lấy màu gradient
@@ -12,6 +15,7 @@ Css-tricks:
 - tympanus.net - tính selector
 - easings.net - xem transition
 - https://picsum.photos/- lấy ảnh
+- https://loremflickr.com - lấy ảnh
 - select 2 class thì cho dấu ' , ' vào
 - https://www.flaticon.com/free-icons/library
 http://jkorpela.fi/styles/spaces.html : kiểm tra space = px

@@ -1,0 +1,105 @@
+body{
+  font-weight: 600;
+  font-size: 15px;
+  /* color: #fff; */
+}
+.fas {
+  color: #fff;
+}
+
+.icon{
+  margin-right: 15px;
+  font-weight: 300;
+}
+
+.avatar{
+  border: 1px solid dark;
+  border-radius: 5px;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  color:white
+}
+
+.sidebar-left{
+  position: relative;
+  top: 23px;
+  right: 78px;
+}
+
+.sidebar-right{
+  position: relative;
+  top: 25px;
+  right: 45px;
+}
+
+.user{
+  margin: 15px 0 15px 0;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.info-user{
+  list-style-type: none;
+  padding: 0;
+  margin: 25px 0 25px 0;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.info-user > li > span {
+  margin-left: 14px;
+}
+.info-user > li > a > span{
+  margin-left: 10px;
+}
+
+.group-tabs{
+  width: 100%;
+}
+
+.nav-tabs {
+  font-weight: 300;
+}
+
+.nav-tabs li:first-child {
+  padding: 15px 15px 15px 0px;
+}
+
+.nav-tabs > li{
+  font-size: 14px;
+  padding: 15px;
+  /* color: black; */
+}
+
+.nav-tabs > li > a {
+  color: black;
+}
+
+.nav-tabs > li > a > span {
+  background: #EDEDEE;
+  padding: 0px 5px 0px 5px;
+  border-radius: 10px;
+}
+
+.notif {
+  background: linear-gradient(#54a3ff,#006eed);
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 8px;
+  top: 5px;
+  border-radius: 5px;
+}
+
+.list-footer{
+  list-style-type: none;
+}
+
+.list-footer > li{
+  position: relative;
+  font-weight: 100;
+  font-size: 13px;
+  padding: 22px;
+  right: 82px;
+}
